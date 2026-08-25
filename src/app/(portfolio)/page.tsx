@@ -1,4 +1,3 @@
-import { AppShell } from "@/components/layouts/app-shell";
 import { ExperiencePreview } from "@/components/home/experience-preview";
 import { Hero } from "@/components/home/hero";
 import { Capabilities } from "@/components/home/capabilities";
@@ -6,7 +5,7 @@ import { FeaturedWork } from "@/components/home/featured-work";
 
 export default function Home() {
   return (
-    <AppShell>
+    <section>
       <div className="space-y-10">
         <Hero />
 
@@ -16,6 +15,6 @@ export default function Home() {
 
         <FeaturedWork />
       </div>
-    </AppShell>
+    </section>
   );
 }
