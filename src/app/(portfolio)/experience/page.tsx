@@ -14,9 +14,8 @@ export default function ExperiencePage() {
         </h1>
 
         <p className="mt-4 max-w-2xl text-sm leading-7 text-muted-foreground">
-          {
-            "A detailed look at the companies, systems, responsibilities, and technologies I've worked with throughout my career."
-          }
+          {`A detailed look at the companies, systems, responsibilities, and
+          technologies I've worked with throughout my career.`}
         </p>
       </section>
 
@@ -34,9 +33,20 @@ export default function ExperiencePage() {
                   {job.role}
                 </h2>
 
-                <p className="mt-1 text-sm text-muted-foreground">
-                  {job.company}
-                </p>
+                {job.companyUrl ? (
+                  <a
+                    href={job.companyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 inline-block text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {job.company}
+                  </a>
+                ) : (
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {job.company}
+                  </p>
+                )}
 
                 <div className="mt-2 flex items-center gap-1.5 text-xs text-muted-foreground">
                   <MapPin className="size-3.5" />
@@ -46,9 +56,7 @@ export default function ExperiencePage() {
 
               <div className="shrink-0">
                 <p className="font-mono text-xs text-muted-foreground sm:text-right">
-                  {job.startDate}
-                  {" — "}
-                  {job.endDate}
+                  {job.startDate} — {job.endDate}
                 </p>
 
                 <p className="mt-1 text-xs text-muted-foreground sm:text-right">
@@ -84,7 +92,6 @@ export default function ExperiencePage() {
                     className="flex gap-3 text-sm leading-6 text-muted-foreground"
                   >
                     <span className="mt-2 size-1 shrink-0 rounded-full bg-muted-foreground" />
-
                     <span>{responsibility}</span>
                   </li>
                 ))}

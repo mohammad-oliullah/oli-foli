@@ -1,3 +1,5 @@
+import { Experience } from "@/types/experience";
+
 export const experience = [
   {
     company: "GoKundu",
@@ -139,4 +141,4 @@ export const experience = [
     description:
       "Handled infrastructure and production deployment responsibilities for Node.js and Next.js applications.",
   },
-] as const;
+] satisfies readonly Experience[];
