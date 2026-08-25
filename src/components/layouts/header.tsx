@@ -1,10 +1,13 @@
 import { Search } from "lucide-react";
 import { ThemeSwitcher } from "@/components/theme/theme-switcher";
+import { MobileSidebar } from "./mobile-sidebar";
 
 export function Header() {
   return (
     <header className="sticky top-0 z-40 flex h-16 items-center justify-between border-b bg-background/95 px-4 backdrop-blur lg:px-6">
-      <div className="lg:hidden">
+      <div className="flex items-center gap-2 lg:hidden">
+        <MobileSidebar />
+
         <span className="font-mono text-sm font-semibold">OLI.DEV</span>
       </div>
 
