@@ -1,4 +1,5 @@
 import { Search } from "lucide-react";
+import { ThemeSwitcher } from "@/components/theme/theme-switcher";
 
 export function Header() {
   return (
@@ -20,6 +21,8 @@ export function Header() {
             ⌘K
           </kbd>
         </button>
+
+        <ThemeSwitcher />
       </div>
     </header>
   );
