@@ -1,7 +1,6 @@
 import {
   Boxes,
   Database,
-  GitBranch,
   Globe,
   Package,
   Server,
@@ -9,6 +8,7 @@ import {
   Terminal,
   Zap,
 } from "lucide-react";
+import { FaSquareGithub } from "react-icons/fa6";
 
 export const capabilities = [
   {
@@ -44,7 +44,7 @@ export const capabilities = [
   },
 
   {
-    icon: GitBranch,
+    icon: FaSquareGithub,
     title: "Infrastructure & CI/CD",
     description:
       "Deploying and maintaining production applications, automating deployments, and managing Linux server infrastructure.",
