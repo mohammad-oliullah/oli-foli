@@ -1,25 +1,18 @@
 import { AppShell } from "@/components/layouts/app-shell";
+import { ExperiencePreview } from "@/components/home/experience-preview";
+import { Hero } from "@/components/home/hero";
+import { Capabilities } from "@/components/home/capabilities";
 
 export default function Home() {
   return (
     <AppShell>
-      <section>
-        <p className="font-mono text-sm text-muted-foreground">/ overview</p>
+      <div className="space-y-10">
+        <Hero />
 
-        <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-          Md. Oliullah Sarder
-        </h1>
+        <ExperiencePreview />
 
-        <p className="mt-2 text-lg text-muted-foreground">
-          Backend / Full-Stack Engineer
-        </p>
-
-        <p className="mt-6 max-w-2xl leading-7 text-muted-foreground">
-          Building backend systems and full-stack applications with Node.js,
-          NestJS, TypeScript, React, Next.js, databases, and modern
-          infrastructure.
-        </p>
-      </section>
+        <Capabilities />
+      </div>
     </AppShell>
   );
 }

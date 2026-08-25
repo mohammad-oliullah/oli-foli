@@ -3,7 +3,7 @@ export const profile = {
   shortName: "Oli",
   title: "AI-driven Backend / Full-Stack Engineer",
 
-  location: "Bangladesh",
+  location: "Mohakhali, Dhaka",
 
   bio: "Backend-focused Full-Stack Engineer building production web applications, APIs, real-time systems, and developer-focused products.",
 
