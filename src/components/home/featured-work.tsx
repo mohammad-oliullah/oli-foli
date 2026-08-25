@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowUpRight, GitBranch } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { FaSquareGithub } from "react-icons/fa6";
 
 import { projects } from "@/data/projects";
 
@@ -86,7 +87,7 @@ export function FeaturedWork() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  <GitBranch className="size-3.5" />
+                  <FaSquareGithub className="size-3.5" />
                   GitHub
                 </Link>
               ) : null}

@@ -6,12 +6,12 @@ import {
   BriefcaseBusiness,
   FileText,
   FolderKanban,
-  GitBranch,
   Home,
   Lightbulb,
   Sparkles,
   UserRound,
 } from "lucide-react";
+import { FaSquareGithub } from "react-icons/fa6";
 
 const navigation = [
   { label: "Overview", href: "/", icon: Home },
@@ -20,7 +20,7 @@ const navigation = [
   { label: "Skills", href: "/skills", icon: Sparkles },
   { label: "Engineering", href: "/engineering", icon: Lightbulb },
   { label: "Career", href: "/career", icon: UserRound },
-  { label: "GitHub", href: "/github", icon: GitBranch },
+  { label: "GitHub", href: "/github", icon: FaSquareGithub },
   { label: "Resume", href: "/resume", icon: FileText },
 ];
 
