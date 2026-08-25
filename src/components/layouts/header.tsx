@@ -1,17 +1,21 @@
 import { Search } from "lucide-react";
 
 import { ThemeSwitcher } from "@/components/theme/theme-switcher";
+import { HeaderMenu } from "./header-menu";
 
 export function Header() {
   return (
-    <header className="z-40 flex h-16 shrink-0 items-center border-b bg-background/95 px-3 backdrop-blur sm:px-4 lg:px-6">
+    <header className="relative z-40 flex shrink-0 items-center border-b bg-background/95 px-3 backdrop-blur sm:px-4 lg:px-6">
       <a
-        className="font-mono text-sm font-semibold tracking-tight"
         href="https://dev.to/oliullah"
         target="_blank"
+        rel="noopener noreferrer"
+        className="font-mono text-sm font-semibold tracking-tight"
       >
         OLI.DEV
       </a>
+
+      <HeaderMenu />
 
       <div className="ml-auto flex items-center gap-2">
         <button
