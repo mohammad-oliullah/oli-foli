@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Oli.dev
 
-## Getting Started
+> A modern, interactive professional portfolio and engineering profile for Md. Oliullah Sarder.
 
-First, run the development server:
+Oli.dev is more than a traditional developer portfolio.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+It is a personal professional platform designed to present my:
+
+- Professional experience
+- Engineering skills
+- Projects
+- Technical decisions
+- Engineering notes
+- Career journey
+- Current learning
+- GitHub activity
+- Resume
+- AI-powered professional assistant
+
+The goal is to make it easy for recruiters, hiring managers, and engineers to understand not only **what I know**, but also **what I have built, how I think, and how I solve engineering problems**.
+
+---
+
+## ✨ Goals
+
+The primary goals of this project are:
+
+1. Present my professional experience clearly.
+2. Demonstrate my backend and full-stack engineering capabilities.
+3. Showcase real projects with technical depth.
+4. Provide evidence for claimed technical skills.
+5. Make my career and learning journey transparent.
+6. Provide an AI assistant that can answer questions about my professional background.
+7. Create a maintainable platform that I can continuously update.
+8. Demonstrate modern frontend, backend, infrastructure, and AI engineering practices.
+
+---
+
+## 🧑‍💻 About Me
+
+**Md. Oliullah Sarder**
+
+Backend / Full-Stack Developer
+
+Primary technologies:
+
+- Node.js
+- NestJS
+- TypeScript
+- React
+- Next.js
+- PostgreSQL
+- MongoDB
+- Redis
+
+Infrastructure and engineering:
+
+- Docker
+- Linux
+- Nginx
+- PM2
+- GitHub Actions
+- VPS
+- Cloudflare
+
+---
+
+## 🏗️ Project Philosophy
+
+This project intentionally avoids the typical developer portfolio structure:
+
+```text
+Hero
+About
+Skills
+Projects
+Contact
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
