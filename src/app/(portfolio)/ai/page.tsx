@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-
+import { ChatPanel } from "@/components/ai/chat-panel";
 import { PageHeader } from "@/components/ui/page-header";
 
 export const metadata: Metadata = {
   title: "Ask Oli AI",
-  description:
-    "Ask Oli AI is not implemented on this portfolio yet. Use the contact page instead.",
-  robots: { index: false, follow: false },
+  description: "A grounded portfolio assistant for questions about Md. Oliullah Sarder.",
 };
 
 export default function AiPage() {
@@ -16,16 +13,9 @@ export default function AiPage() {
       <PageHeader
         path="/ ai"
         title="Ask Oli AI"
-        description="This assistant is not built yet. There is no model, retrieval, or recruiter chat on this deployment."
+        description="Ask concise questions about Oli’s experience, technologies, projects, or contact details. The assistant answers only from the portfolio data."
       />
-      <p className="text-sm leading-7 text-muted-foreground">
-        For questions about experience, stack, or availability, use{" "}
-        <Link href="/contact" className="underline underline-offset-2">
-          contact
-        </Link>{" "}
-        or the pages in the left nav. Wiring an API here without a real backend
-        would be theater.
-      </p>
+      <ChatPanel />
     </div>
   );
 }

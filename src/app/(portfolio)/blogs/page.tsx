@@ -1,23 +1,26 @@
 import type { Metadata } from "next";
-import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 import { PageHeader } from "@/components/ui/page-header";
-import { ExternalLink } from "@/components/ui/external-link";
-import { blogs, blogsNote } from "@/data/blogs";
+import { blogsNote } from "@/data/blogs";
+import { getPublishedPosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
   title: "Blogs",
   description: "Writing by Md. Oliullah Sarder. The index is empty until posts are added in data.",
 };
 
-export default function BlogsPage() {
+export const dynamic = "force-dynamic";
+
+export default async function BlogsPage() {
+  const blogs = await getPublishedPosts();
   return (
     <div className="space-y-10">
       <PageHeader path="/ blogs" title="Blogs" description={blogsNote} />
 
       {blogs.length === 0 ? (
         <p className="rounded-lg border p-5 text-sm text-muted-foreground">
-          No published entries in <code className="font-mono text-xs">src/data/blogs.ts</code>.
+          No published entries yet.
         </p>
       ) : (
         <ul className="space-y-4">
@@ -30,23 +33,9 @@ export default function BlogsPage() {
               <p className="mt-2 text-sm leading-6 text-muted-foreground">
                 {post.excerpt}
               </p>
-              {post.url.startsWith("http") ? (
-                <ExternalLink
-                  href={post.url}
-                  className="mt-3 inline-flex items-center gap-1 text-xs hover:text-muted-foreground"
-                >
-                  Read
-                  <ArrowUpRight className="size-3.5" />
-                </ExternalLink>
-              ) : (
-                <a
-                  href={post.url}
-                  className="mt-3 inline-flex items-center gap-1 text-xs hover:text-muted-foreground"
-                >
-                  Read
-                  <ArrowUpRight className="size-3.5" />
-                </a>
-              )}
+              <Link href={post.url} className="mt-3 inline-flex text-xs hover:text-muted-foreground">
+                Read post →
+              </Link>
             </li>
           ))}
         </ul>
