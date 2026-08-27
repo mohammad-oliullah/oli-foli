@@ -27,31 +27,52 @@ function isRateLimited(request: Request) {
 
 export async function POST(request: Request) {
   if (isRateLimited(request)) {
-    return NextResponse.json({ error: "Please wait a minute before sending more questions." }, { status: 429 });
+    return NextResponse.json(
+      { error: "Please wait a minute before sending more questions." },
+      { status: 429 },
+    );
   }
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
-    return NextResponse.json({ error: "The assistant is not configured yet. Please use the contact page." }, { status: 503 });
+    return NextResponse.json(
+      {
+        error:
+          "The assistant is not configured yet. Please use the contact page.",
+      },
+      { status: 503 },
+    );
   }
 
   try {
     const body = (await request.json()) as { messages?: UIMessage[] };
-    if (!Array.isArray(body.messages) || body.messages.length === 0 || body.messages.length > 12) {
-      return NextResponse.json({ error: "A valid conversation is required." }, { status: 400 });
+    if (
+      !Array.isArray(body.messages) ||
+      body.messages.length === 0 ||
+      body.messages.length > 12
+    ) {
+      return NextResponse.json(
+        { error: "A valid conversation is required." },
+        { status: 400 },
+      );
     }
-    const contents = body.messages.map((message) => ({
-      role: message.role === "assistant" ? "model" : "user",
-      parts: message.parts
-        .filter((part) => part.type === "text")
-        .map((part) => ({ text: part.text })),
-    })).filter((message) => message.parts.length > 0);
+    const contents = body.messages
+      .map((message) => ({
+        role: message.role === "assistant" ? "model" : "user",
+        parts: message.parts
+          .filter((part) => part.type === "text")
+          .map((part) => ({ text: part.text })),
+      }))
+      .filter((message) => message.parts.length > 0);
 
     if (contents.length === 0) {
-      return NextResponse.json({ error: "A text question is required." }, { status: 400 });
+      return NextResponse.json(
+        { error: "A text question is required." },
+        { status: 400 },
+      );
     }
 
     const model = new GoogleGenerativeAI(apiKey).getGenerativeModel({
-      model: "gemini-2.0-flash",
+      model: "gemini-3.6-flash",
       systemInstruction: portfolioAssistantInstructions,
     });
     const result = await model.generateContentStream({ contents });
@@ -65,10 +86,18 @@ export async function POST(request: Request) {
         }
         writer.write({ type: "text-end", id });
       },
-      onError: () => "The assistant could not answer right now. Please use the contact page.",
+      onError: () =>
+        "The assistant could not answer right now. Please use the contact page.",
     });
     return createUIMessageStreamResponse({ stream });
-  } catch {
-    return NextResponse.json({ error: "The assistant could not answer right now. Please use the contact page." }, { status: 500 });
+  } catch (error) {
+    console.error("Portfolio assistant request failed:", error);
+    return NextResponse.json(
+      {
+        error:
+          "The assistant could not answer right now. Please use the contact page.",
+      },
+      { status: 500 },
+    );
   }
 }

@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 interface PageHeaderProps {
   path: string;
   title: string;
-  description: string;
+  description?: string;
   actions?: ReactNode;
 }
 
