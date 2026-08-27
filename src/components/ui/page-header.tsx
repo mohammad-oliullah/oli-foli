@@ -21,7 +21,7 @@ export function PageHeader({
           <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
             {title}
           </h1>
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-muted-foreground">
+          <p className="mt-4 block max-w-2xl text-sm leading-7 text-muted-foreground">
             {description}
           </p>
         </div>

@@ -18,7 +18,7 @@ export const profile = {
   links: {
     github: "https://github.com/mohammad-oliullah",
     devTo: "https://dev.to/oliullah",
-    linkedin: "https://www.linkedin.com/in/oliullah/",
+    linkedin: "https://www.linkedin.com/in/mohammad-oliullah-4421aa212/",
   },
 
   contact: {

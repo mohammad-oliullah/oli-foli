@@ -4,12 +4,13 @@ import { PageHeader } from "@/components/ui/page-header";
 
 export const metadata: Metadata = {
   title: "Ask Oli AI",
-  description: "A grounded portfolio assistant for questions about Md. Oliullah Sarder.",
+  description:
+    "A grounded portfolio assistant for questions about Md. Oliullah Sarder.",
 };
 
 export default function AiPage() {
   return (
-    <div className="space-y-10">
+    <div className="ai-page flex h-full min-h-0 flex-col gap-6">
       <PageHeader
         path="/ ai"
         title="Ask Oli AI"

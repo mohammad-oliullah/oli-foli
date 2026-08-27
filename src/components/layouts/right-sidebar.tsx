@@ -85,8 +85,8 @@ export function RightSidebar() {
   const currentPage = resolvePage(pathname);
 
   return (
-    <aside className="hidden h-full w-56 shrink-0 border-l bg-background lg:block">
-      <div className="flex h-full flex-col overflow-y-auto p-4">
+    <aside className="hidden h-full w-56 shrink-0 overflow-hidden border-l bg-background lg:block">
+      <div className="flex h-full flex-col overflow-hidden p-4">
         <div>
           <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
             Context

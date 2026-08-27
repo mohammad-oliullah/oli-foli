@@ -123,12 +123,30 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply min-h-0 overflow-hidden bg-background text-foreground;
   }
 
   html {
-    @apply font-sans;
+    @apply h-full overflow-hidden font-sans;
   }
+}
+
+/* The AI workspace owns its height; only its response history scrolls. */
+main:has(.ai-page),
+main:has(.ai-page) > div {
+  overflow: hidden;
+}
+
+main:has(.ai-page) {
+  display: flex;
+  flex-direction: column;
+}
+
+main:has(.ai-page) > div {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
 }
 
 .scrollbar-thin {

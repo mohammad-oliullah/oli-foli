@@ -3,7 +3,7 @@ import { Bot, Mail } from "lucide-react";
 
 export function BottomBar() {
   return (
-    <footer className="shrink-0 border-t bg-background">
+    <footer className="sticky bottom-0 z-40 shrink-0 border-t bg-background">
       <div className="mx-auto flex min-h-12 max-w-7xl items-center justify-between gap-4 px-4 py-2 sm:px-6 lg:px-8">
         <Link
           href="/contact"
