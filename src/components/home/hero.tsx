@@ -32,7 +32,7 @@ export function Hero() {
           className="mt-3 inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground"
         >
           <Bot className="size-3.5" aria-hidden />
-          Ask AI about me
+          Ask Oli AI
         </ExternalLink>
       </h1>
       <p className="mt-2 text-sm text-muted-foreground">{profile.title}</p>
