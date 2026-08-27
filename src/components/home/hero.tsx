@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, MapPin } from "lucide-react";
+import { ArrowUpRight, Bot, MapPin } from "lucide-react";
 import { FaSquareGithub } from "react-icons/fa6";
 
 import { ExternalLink } from "@/components/ui/external-link";
@@ -25,7 +25,15 @@ export function Hero() {
       </div>
 
       <h1 className="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">
-        {profile.name}
+        {profile.name}{" "}
+        <ExternalLink
+          href="/ai"
+          aria-label="Ask Oli AI about Oli"
+          className="mt-3 inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground"
+        >
+          <Bot className="size-3.5" aria-hidden />
+          Ask Oli AI
+        </ExternalLink>
       </h1>
       <p className="mt-2 text-sm text-muted-foreground">{profile.title}</p>
       <p className="mt-4 max-w-3xl text-sm leading-7 text-muted-foreground">
