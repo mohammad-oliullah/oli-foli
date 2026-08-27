@@ -123,12 +123,30 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply min-h-0 overflow-hidden bg-background text-foreground;
   }
 
   html {
-    @apply font-sans;
+    @apply h-full overflow-hidden font-sans;
   }
+}
+
+/* The AI workspace owns its height; only its response history scrolls. */
+main:has(.ai-page),
+main:has(.ai-page) > div {
+  overflow: hidden;
+}
+
+main:has(.ai-page) {
+  display: flex;
+  flex-direction: column;
+}
+
+main:has(.ai-page) > div {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
 }
 
 .scrollbar-thin {
@@ -152,3 +170,18 @@
 .scrollbar-thin::-webkit-scrollbar {
   width: 3px;
 }
+
+.field {
+  @apply w-full rounded-md border bg-background px-3 py-2 text-sm font-normal outline-none focus:ring-3 focus:ring-ring/50;
+}
+
+.prose-lite h1, .prose-lite h2, .prose-lite h3 { @apply mt-7 font-semibold tracking-tight; }
+.prose-lite h1 { @apply text-2xl; }
+.prose-lite h2 { @apply text-xl; }
+.prose-lite h3 { @apply text-lg; }
+.prose-lite p { @apply mt-4; }
+.prose-lite ul { @apply mt-4 list-disc space-y-2 pl-5; }
+.prose-lite ol { @apply mt-4 list-decimal space-y-2 pl-5; }
+.prose-lite a { @apply underline underline-offset-4; }
+.prose-lite code { @apply rounded bg-muted px-1 py-0.5 font-mono text-xs; }
+.prose-lite pre { @apply mt-4 overflow-x-auto rounded-md border bg-muted p-4; }

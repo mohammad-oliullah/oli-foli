@@ -1,6 +1,13 @@
 import { MapPin } from "lucide-react";
+import type { Metadata } from "next";
 
 import { experience } from "@/data/experience";
+
+export const metadata: Metadata = {
+  title: "Experience",
+  description:
+    "Professional experience for Md. Oliullah Sarder — GoKundu, HawkEyes, MNTECH, and independent infrastructure work.",
+};
 
 export default function ExperiencePage() {
   return (

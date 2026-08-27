@@ -18,10 +18,20 @@ export const profile = {
   links: {
     github: "https://github.com/mohammad-oliullah",
     devTo: "https://dev.to/oliullah",
-    linkedin: "https://www.linkedin.com/in/oliullah/",
+    linkedin: "https://www.linkedin.com/in/mohammad-oliullah-4421aa212/",
   },
 
   contact: {
     email: "mohammad.oliullah25@gmail.com",
   },
+
+  currentFocus: [
+    "Backend and full-stack delivery in TypeScript",
+    "Production Linux VPS, Nginx, Docker, PM2, and CI/CD",
+    "Automation pipelines and multi-tenant product dashboards",
+    "Open-source geo/data tooling (@olism/bd-geo)",
+  ],
+
+  resumePath: "/resume/md-oliullah-sarder.pdf",
+  resumeAvailable: false,
 } as const;
