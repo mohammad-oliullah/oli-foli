@@ -32,14 +32,18 @@ export function Sidebar() {
       <nav className="flex h-full flex-col gap-1 p-1.5 sm:p-2 xl:p-3">
         {navigation.map((item) => {
           const Icon = item.icon;
-          const active = pathname === item.href;
+          const active =
+            item.href === "/"
+              ? pathname === "/"
+              : pathname === item.href || pathname.startsWith(`${item.href}/`);
 
           return (
             <Link
               key={item.href}
               href={item.href}
               title={item.label}
-              className={`flex items-center justify-center gap-3 rounded-md px-2 py-2.5 text-sm transition-colors xl:justify-start xl:px-3 ${
+              aria-current={active ? "page" : undefined}
+              className={`flex items-center justify-center gap-3 rounded-md px-2 py-2.5 text-sm transition-colors focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50 xl:justify-start xl:px-3 ${
                 active
                   ? "bg-muted text-foreground"
                   : "text-muted-foreground hover:bg-muted hover:text-foreground"

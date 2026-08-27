@@ -24,4 +24,14 @@ export const profile = {
   contact: {
     email: "mohammad.oliullah25@gmail.com",
   },
+
+  currentFocus: [
+    "Backend and full-stack delivery in TypeScript",
+    "Production Linux VPS, Nginx, Docker, PM2, and CI/CD",
+    "Automation pipelines and multi-tenant product dashboards",
+    "Open-source geo/data tooling (@olism/bd-geo)",
+  ],
+
+  resumePath: "/resume/md-oliullah-sarder.pdf",
+  resumeAvailable: false,
 } as const;
