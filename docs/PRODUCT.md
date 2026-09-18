@@ -3,7 +3,7 @@
 
 ## 1. Product Overview
 
-Oli.dev is an interactive professional profile for Md. Oliullah Sarder.
+Olism is an interactive professional profile for Md. Oliullah Sarder.
 
 It is designed to replace the conventional static developer portfolio with a structured, searchable, evidence-driven professional experience.
 

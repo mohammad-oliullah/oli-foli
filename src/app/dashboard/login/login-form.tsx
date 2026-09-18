@@ -32,7 +32,7 @@ export function LoginForm() {
   return (
     <form onSubmit={onSubmit} className="w-full rounded-lg border p-6">
       <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
-        OLI.DEV / private
+        Olism / private
       </p>
       <h1 className="mt-3 text-xl font-semibold">Blog dashboard</h1>
       <p className="mt-2 text-sm leading-6 text-muted-foreground">
