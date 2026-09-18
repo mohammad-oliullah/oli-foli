@@ -16,7 +16,7 @@ export function Header() {
         href="/"
         className="font-mono text-sm font-semibold tracking-tight focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
       >
-        OLI.DEV
+        Olism
       </Link>
 
       <HeaderMenu />

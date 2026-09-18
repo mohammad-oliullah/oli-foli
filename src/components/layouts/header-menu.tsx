@@ -10,7 +10,7 @@ export function HeaderMenu() {
 
   return (
     <nav
-      className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center"
+      className="absolute left-1/2 top-1/2 hidden lg:flex -translate-x-1/2 -translate-y-1/2 items-center"
       onMouseLeave={() => setProductsOpen(false)}
       aria-label="Products and blogs"
     >
