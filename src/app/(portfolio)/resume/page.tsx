@@ -30,8 +30,8 @@ export default function ResumePage() {
 
       <section className="rounded-lg border p-5">
         <h2 className="text-lg font-semibold">{profile.name}</h2>
-        <p className="mt-1 text-sm text-muted-foreground">{profile.title}</p>
-        <p className="mt-3 text-sm leading-7 text-muted-foreground">
+        <p className="mt-1 text-sm text-foreground">{profile.title}</p>
+        <p className="mt-3 text-sm leading-7 text-foreground">
           {profile.summary}
         </p>
         <dl className="mt-4 grid gap-2 text-sm sm:grid-cols-2">
@@ -83,7 +83,7 @@ export default function ResumePage() {
             Download PDF
           </a>
         ) : (
-          <p className="mt-3 text-sm leading-7 text-muted-foreground">
+          <p className="mt-3 text-sm leading-7 text-foreground">
             PDF is not attached. Add a file at{" "}
             <code className="font-mono text-xs">
               public/resume/md-oliullah-sarder.pdf
@@ -113,7 +113,7 @@ export default function ResumePage() {
                   {job.startDate} — {job.endDate}
                 </p>
               </div>
-              <p className="mt-2 text-sm text-muted-foreground">{job.description}</p>
+              <p className="mt-2 text-sm text-foreground">{job.description}</p>
             </li>
           ))}
         </ul>

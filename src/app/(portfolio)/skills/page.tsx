@@ -28,7 +28,7 @@ export default function SkillsPage() {
             <h2 className="text-lg font-semibold tracking-tight">
               {category.title}
             </h2>
-            <p className="mt-2 max-w-3xl text-sm leading-6 text-muted-foreground">
+            <p className="mt-2 max-w-3xl text-sm leading-6 text-foreground">
               {category.summary}
             </p>
 
@@ -47,7 +47,7 @@ export default function SkillsPage() {
                       <td className="py-3 pr-4 align-top font-medium">
                         {item.name}
                       </td>
-                      <td className="py-3 pr-4 align-top text-muted-foreground">
+                      <td className="py-3 pr-4 align-top text-foreground">
                         {item.usedFor}
                       </td>
                       <td className="py-3 align-top font-mono text-xs text-muted-foreground">

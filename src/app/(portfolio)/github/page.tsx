@@ -42,7 +42,7 @@ export default function GitHubPage() {
         <h2 className="text-lg font-semibold tracking-tight">
           Notable repositories
         </h2>
-        <p className="mt-2 text-sm text-muted-foreground">
+        <p className="mt-2 text-sm text-foreground">
           Only repos that already have URLs in this site&apos;s data. No invented
           stars, forks, or contribution graphs.
         </p>
@@ -55,7 +55,7 @@ export default function GitHubPage() {
                   {repo.kind}
                 </span>
               </div>
-              <p className="mt-2 text-sm leading-6 text-muted-foreground">
+              <p className="mt-2 text-sm leading-6 text-foreground">
                 {repo.description}
               </p>
               <ExternalLink
@@ -74,7 +74,7 @@ export default function GitHubPage() {
         <h2 className="text-lg font-semibold tracking-tight">
           Engineering experiments
         </h2>
-        <p className="mt-2 text-sm leading-7 text-muted-foreground">
+        <p className="mt-2 text-sm leading-7 text-foreground">
           {githubExperimentNote}
         </p>
       </section>

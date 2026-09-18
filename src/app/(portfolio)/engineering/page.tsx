@@ -29,7 +29,7 @@ export default function EngineeringPage() {
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <h2 className="text-sm font-semibold">{topic.title}</h2>
-                  <p className="mt-1 text-xs leading-5 text-muted-foreground">
+                  <p className="mt-1 text-xs leading-5 text-foreground">
                     {topic.summary}
                   </p>
                 </div>
@@ -46,7 +46,7 @@ export default function EngineeringPage() {
                 {topic.details.map((detail) => (
                   <li
                     key={detail}
-                    className="text-sm leading-7 text-muted-foreground"
+                    className="text-sm leading-7 text-foreground"
                   >
                     {detail}
                   </li>

@@ -41,7 +41,7 @@ export function ExperiencePreview() {
                 <div className="min-w-0">
                   <h3 className="font-medium tracking-tight">{job.role}</h3>
 
-                  <p className="mt-1 text-sm text-muted-foreground">
+                  <p className="mt-1 text-sm text-foreground">
                     {job.company}
                   </p>
                 </div>
@@ -59,7 +59,7 @@ export function ExperiencePreview() {
             </div>
 
             <div className="mt-4 pl-0 sm:pl-12">
-              <p className="max-w-3xl text-sm leading-6 text-muted-foreground">
+              <p className="max-w-3xl text-sm leading-6 text-foreground">
                 {job.description}
               </p>
 

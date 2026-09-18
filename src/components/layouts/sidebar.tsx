@@ -45,8 +45,8 @@ export function Sidebar() {
               aria-current={active ? "page" : undefined}
               className={`flex items-center justify-center gap-3 rounded-md px-2 py-2.5 text-sm transition-colors focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50 xl:justify-start xl:px-3 ${
                 active
-                  ? "bg-muted text-foreground"
-                  : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                  ? "bg-muted font-medium text-foreground"
+                  : "text-foreground/70 hover:bg-muted hover:text-foreground"
               }`}
             >
               <Icon className="size-4 shrink-0" />

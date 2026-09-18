@@ -19,7 +19,7 @@ export function FeaturedWork() {
           <h2 className="mt-2 text-xl font-semibold tracking-tight">
             Featured Projects
           </h2>
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-foreground">
             Products and developer tools with a public repo or live surface.
           </p>
         </div>
@@ -54,7 +54,7 @@ export function FeaturedWork() {
               </span>
             </div>
 
-            <p className="mt-4 text-sm leading-6 text-muted-foreground">
+            <p className="mt-4 text-sm leading-6 text-foreground">
               {project.shortDescription}
             </p>
 

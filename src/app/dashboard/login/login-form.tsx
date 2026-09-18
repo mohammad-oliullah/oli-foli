@@ -35,7 +35,7 @@ export function LoginForm() {
         Olism / private
       </p>
       <h1 className="mt-3 text-xl font-semibold">Blog dashboard</h1>
-      <p className="mt-2 text-sm leading-6 text-muted-foreground">
+      <p className="mt-2 text-sm leading-6 text-foreground">
         Single-admin access for writing and publishing posts.
       </p>
       <label className="mt-6 block text-sm font-medium" htmlFor="email">
