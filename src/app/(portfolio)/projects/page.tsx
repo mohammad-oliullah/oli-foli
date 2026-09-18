@@ -46,7 +46,7 @@ export default function ProjectsPage() {
               </span>
             </div>
 
-            <p className="mt-4 max-w-3xl text-sm leading-7 text-muted-foreground">
+            <p className="mt-4 max-w-3xl text-sm leading-7 text-foreground">
               {project.shortDescription}
             </p>
 

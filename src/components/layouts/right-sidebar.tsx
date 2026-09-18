@@ -54,7 +54,7 @@ const pageInfo: Record<
   },
   "/ai": {
     title: "Ask Oli AI",
-    description: "Planned assistant. Not implemented on this site yet.",
+    description: "Ask about experience, projects, stack, or role fit.",
   },
 };
 
@@ -91,8 +91,8 @@ export function RightSidebar() {
           <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
             Context
           </p>
-          <h2 className="mt-3 text-sm font-semibold">{currentPage.title}</h2>
-          <p className="mt-2 text-xs leading-5 text-muted-foreground">
+          <h2 className="mt-3 text-sm font-semibold text-foreground">{currentPage.title}</h2>
+          <p className="mt-2 text-xs leading-5 text-foreground">
             {currentPage.description}
           </p>
         </div>
@@ -109,7 +109,7 @@ export function RightSidebar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="flex items-center justify-between rounded-md px-2 py-2 text-xs text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
+                className="flex items-center justify-between rounded-md px-2 py-2 text-xs text-foreground/80 transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
               >
                 <span className="flex items-center gap-2">
                   <Icon className="size-3.5" />

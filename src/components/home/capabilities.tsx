@@ -12,7 +12,7 @@ export function Capabilities() {
           What I Build
         </h2>
 
-        <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">
+        <p className="mt-2 max-w-2xl text-sm leading-6 text-foreground">
           Practical experience across backend systems, full-stack applications,
           databases, real-time systems, infrastructure, and integrations.
         </p>
@@ -31,7 +31,7 @@ export function Capabilities() {
 
               <h3 className="mt-4 text-sm font-semibold">{capability.title}</h3>
 
-              <p className="mt-2 text-xs leading-5 text-muted-foreground">
+              <p className="mt-2 text-xs leading-5 text-foreground">
                 {capability.description}
               </p>
 

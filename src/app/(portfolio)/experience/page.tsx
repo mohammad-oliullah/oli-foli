@@ -20,7 +20,7 @@ export default function ExperiencePage() {
           Professional Experience
         </h1>
 
-        <p className="mt-4 max-w-2xl text-sm leading-7 text-muted-foreground">
+        <p className="mt-4 max-w-2xl text-sm leading-7 text-foreground">
           {`A detailed look at the companies, systems, responsibilities, and
           technologies I've worked with throughout my career.`}
         </p>
@@ -45,12 +45,12 @@ export default function ExperiencePage() {
                     href={job.companyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1 inline-block text-sm text-muted-foreground transition-colors hover:text-foreground"
+                    className="mt-1 inline-block text-sm text-foreground transition-colors hover:underline"
                   >
                     {job.company}
                   </a>
                 ) : (
-                  <p className="mt-1 text-sm text-muted-foreground">
+                  <p className="mt-1 text-sm text-foreground">
                     {job.company}
                   </p>
                 )}
@@ -82,7 +82,7 @@ export default function ExperiencePage() {
             </div>
 
             {/* Description */}
-            <p className="mt-5 max-w-3xl text-sm leading-7 text-muted-foreground">
+            <p className="mt-5 max-w-3xl text-sm leading-7 text-foreground">
               {job.description}
             </p>
 
@@ -96,7 +96,7 @@ export default function ExperiencePage() {
                 {job.responsibilities.map((responsibility) => (
                   <li
                     key={responsibility}
-                    className="flex gap-3 text-sm leading-6 text-muted-foreground"
+                    className="flex gap-3 text-sm leading-6 text-foreground"
                   >
                     <span className="mt-2 size-1 shrink-0 rounded-full bg-muted-foreground" />
                     <span>{responsibility}</span>

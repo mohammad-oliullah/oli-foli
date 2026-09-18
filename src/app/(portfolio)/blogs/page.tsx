@@ -19,7 +19,7 @@ export default async function BlogsPage() {
       <PageHeader path="/ blogs" title="Blogs" description={blogsNote} />
 
       {blogs.length === 0 ? (
-        <p className="rounded-lg border p-5 text-sm text-muted-foreground">
+        <p className="rounded-lg border p-5 text-sm text-foreground">
           No published entries yet.
         </p>
       ) : (
@@ -30,7 +30,7 @@ export default async function BlogsPage() {
                 {post.category} · {post.date} · {post.readingTime}
               </p>
               <h2 className="mt-2 text-lg font-semibold">{post.title}</h2>
-              <p className="mt-2 text-sm leading-6 text-muted-foreground">
+              <p className="mt-2 text-sm leading-6 text-foreground">
                 {post.excerpt}
               </p>
               <Link href={post.url} className="mt-3 inline-flex text-xs hover:text-muted-foreground">

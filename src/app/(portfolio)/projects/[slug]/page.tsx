@@ -62,7 +62,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           {project.category}
           {project.year ? ` · ${project.year}` : ""}
         </p>
-        <p className="mt-4 max-w-3xl text-sm leading-7 text-muted-foreground">
+        <p className="mt-4 max-w-3xl text-sm leading-7 text-foreground">
           {project.longDescription}
         </p>
         <div className="mt-5 flex flex-wrap gap-3 text-sm">
@@ -113,7 +113,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           {project.problemsSolved.map((item) => (
             <li
               key={item}
-              className="flex gap-3 text-sm leading-6 text-muted-foreground"
+              className="flex gap-3 text-sm leading-6 text-foreground"
             >
               <span className="mt-2 size-1 shrink-0 rounded-full bg-muted-foreground" />
               <span>{item}</span>
@@ -130,7 +130,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           {project.architecture.map((item) => (
             <li
               key={item}
-              className="flex gap-3 text-sm leading-6 text-muted-foreground"
+              className="flex gap-3 text-sm leading-6 text-foreground"
             >
               <span className="mt-2 size-1 shrink-0 rounded-full bg-muted-foreground" />
               <span>{item}</span>
@@ -147,7 +147,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           {project.keyFeatures.map((item) => (
             <li
               key={item}
-              className="flex gap-3 text-sm leading-6 text-muted-foreground"
+              className="flex gap-3 text-sm leading-6 text-foreground"
             >
               <span className="mt-2 size-1 shrink-0 rounded-full bg-muted-foreground" />
               <span>{item}</span>

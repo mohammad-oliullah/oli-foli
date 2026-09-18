@@ -8,7 +8,7 @@ export const profile = {
   bio: "Backend-focused Full-Stack Engineer building production web applications, APIs, real-time systems, and developer-focused products.",
 
   summary:
-    "I build reliable backend systems and full-stack applications with TypeScript, Node.js, NestJS, React, Next.js, databases, Redis, Docker, and modern deployment workflows.",
+    "Software Developer with 3+ years of hands-on experience building scalable backend systems and full-stack applications. Strong in TypeScript, Node.js, NestJS, React, Next.js, database architecture, APIs, real-time systems, and automation. I build software with a focus on reliability, clean architecture, and real-world impact.",
 
   availability: {
     status: "open",

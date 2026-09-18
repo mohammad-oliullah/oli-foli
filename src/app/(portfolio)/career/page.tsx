@@ -33,7 +33,7 @@ export default function CareerPage() {
           {career.targetRoles.map((role) => (
             <li
               key={role}
-              className="flex gap-3 text-sm leading-6 text-muted-foreground"
+              className="flex gap-3 text-sm leading-6 text-foreground"
             >
               <span className="mt-2 size-1 shrink-0 rounded-full bg-muted-foreground" />
               <span>{role}</span>
@@ -46,7 +46,7 @@ export default function CareerPage() {
         <h2 className="text-lg font-semibold tracking-tight">
           Technologies I want to work with
         </h2>
-        <p className="mt-2 text-sm text-muted-foreground">
+        <p className="mt-2 text-sm text-foreground">
           Same stack I already ship in — not a wishlist of frameworks I have never used.
         </p>
         <div className="mt-4">
@@ -60,7 +60,7 @@ export default function CareerPage() {
           {career.interests.map((item) => (
             <li
               key={item}
-              className="rounded-md border px-3 py-2 text-sm text-muted-foreground"
+              className="rounded-md border px-3 py-2 text-sm text-foreground"
             >
               {item}
             </li>
@@ -76,7 +76,7 @@ export default function CareerPage() {
           {career.problemSpaces.map((item) => (
             <li
               key={item}
-              className="flex gap-3 text-sm leading-6 text-muted-foreground"
+              className="flex gap-3 text-sm leading-6 text-foreground"
             >
               <span className="mt-2 size-1 shrink-0 rounded-full bg-muted-foreground" />
               <span>{item}</span>
@@ -91,7 +91,7 @@ export default function CareerPage() {
           {career.currentlyExploring.map((item) => (
             <li
               key={item}
-              className="flex gap-3 text-sm leading-6 text-muted-foreground"
+              className="flex gap-3 text-sm leading-6 text-foreground"
             >
               <span className="mt-2 size-1 shrink-0 rounded-full bg-muted-foreground" />
               <span>{item}</span>
@@ -100,7 +100,7 @@ export default function CareerPage() {
         </ul>
       </section>
 
-      <p className="text-sm text-muted-foreground">
+      <p className="text-sm text-foreground">
         Experience and projects are the evidence. See{" "}
         <Link href="/experience" className="underline underline-offset-2">
           experience

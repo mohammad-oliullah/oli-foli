@@ -17,7 +17,7 @@ export function CurrentFocus() {
         {profile.currentFocus.map((item) => (
           <li
             key={item}
-            className="flex gap-3 text-sm leading-6 text-muted-foreground"
+            className="flex gap-3 text-sm leading-6 text-foreground"
           >
             <span className="mt-2 size-1 shrink-0 rounded-full bg-muted-foreground" />
             <span>{item}</span>
@@ -37,7 +37,7 @@ export function OpenSourcePreview() {
       <h2 className="mt-2 text-xl font-semibold tracking-tight">
         @olism/bd-geo
       </h2>
-      <p className="mt-3 max-w-3xl text-sm leading-7 text-muted-foreground">
+      <p className="mt-3 max-w-3xl text-sm leading-7 text-foreground">
         npm package for structured Bangladesh geographical data: divisions,
         districts, upazilas/thanas, areas, and villages. Intended for address
         forms, e-commerce, delivery, real estate, and location-based apps.
@@ -79,7 +79,7 @@ export function ContactCta() {
       <h2 className="mt-2 text-xl font-semibold tracking-tight">
         How to reach me
       </h2>
-      <p className="mt-3 max-w-2xl text-sm leading-7 text-muted-foreground">
+      <p className="mt-3 max-w-2xl text-sm leading-7 text-foreground">
         Email is the most reliable path. LinkedIn and GitHub are public.
       </p>
       <div className="mt-4 flex flex-wrap gap-2 text-sm">

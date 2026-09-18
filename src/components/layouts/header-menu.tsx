@@ -23,7 +23,7 @@ export function HeaderMenu() {
         className={`rounded-md px-3 py-2 text-sm transition-colors focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50 ${
           productsOpen
             ? "text-foreground"
-            : "text-muted-foreground hover:text-foreground"
+            : "text-foreground/75 hover:text-foreground"
         }`}
       >
         Products
@@ -42,7 +42,7 @@ export function HeaderMenu() {
               href={product.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="shrink-0 whitespace-nowrap px-2 py-2 text-xs text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
+              className="shrink-0 whitespace-nowrap px-2 py-2 text-xs text-foreground/75 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
             >
               {product.name}
             </a>
@@ -50,7 +50,7 @@ export function HeaderMenu() {
             <Link
               key={product.slug}
               href={product.href}
-              className="shrink-0 whitespace-nowrap px-2 py-2 text-xs text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
+              className="shrink-0 whitespace-nowrap px-2 py-2 text-xs text-foreground/75 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
             >
               {product.name}
             </Link>
@@ -60,7 +60,7 @@ export function HeaderMenu() {
 
       <Link
         href="/blogs"
-        className="shrink-0 rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
+        className="shrink-0 rounded-md px-3 py-2 text-sm text-foreground/75 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
       >
         Blogs
       </Link>
