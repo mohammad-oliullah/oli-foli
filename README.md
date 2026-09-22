@@ -1,23 +1,12 @@
 # Olism
 
-> A modern, interactive professional portfolio and engineering profile for **Md. Oliullah Sarder**.
+> Md. Oliullah Sarder
+>
+> AI-native Backend / Full-Stack Software Developer
 
-**Olism** is more than a traditional developer portfolio.
+## Who am I?
 
-It is a personal professional platform built to document my engineering work, experience, projects, technical decisions, learning, and career journey in one place.
-
-The goal is simple:
-
-> **Don't just show what I know. Show what I have built, how I think, and how I solve problems.**
-
----
-
-## 👨‍💻 About Me
-
-**Md. Oliullah Sarder**
-Backend / Full-Stack Software Developer
-
-I am a software developer focused primarily on building backend systems and full-stack applications with the JavaScript/TypeScript ecosystem.
+I am a software developer focused on building backend systems and full-stack applications using JavaScript and TypeScript.
 
 My core stack includes:
 
@@ -30,27 +19,27 @@ My core stack includes:
 - MongoDB
 - Redis
 
-I also work with the infrastructure around applications:
+I also work with the supporting infrastructure around applications:
 
 - Docker
 - Linux
 - Nginx
 - PM2
 - GitHub Actions
-- VPS infrastructure
 - Cloudflare
+- VPS deployment
 
-My interests extend beyond writing application code into **system design, backend architecture, automation, DevOps, AI-assisted development, and building reliable production systems**.
+I am especially interested in backend architecture, system design, automation, DevOps, and building reliable production systems.
 
 ---
 
-# 🛠️ What I Have Done
+## Experience
 
-My professional experience has involved working across backend, full-stack development, automation, infrastructure, and internal business systems.
+My work has covered backend engineering, full-stack development, automation, infrastructure, and internal business systems.
 
-### Backend Engineering
+### Backend and full-stack engineering
 
-I have built and maintained backend applications using:
+I have built and maintained systems using:
 
 - Node.js
 - NestJS
@@ -63,190 +52,89 @@ I have built and maintained backend applications using:
 - REST APIs
 - WebSockets / Socket.IO
 
-Some of the systems I have worked on include real-time communication services, case-management systems, automation platforms, data collection systems, and business applications.
+This includes real-time communication services, case-management systems, automation platforms, business applications, and internal tools.
 
-### System Design & Architecture
+### System design and architecture
 
-I have worked on systems involving:
+I work with:
 
 - Database and ERD design
 - Role-based access control
-- Multi-tenant architecture
 - Authentication and authorization
+- Multi-tenant architecture
 - Audit trails
-- Evidence and document workflows
+- API design
 - Background processing
 - Real-time communication
-- API design
-- Service separation
-- Application-level security
+- Application security
 
-I try to understand the system as a whole rather than treating individual features as isolated pieces of code.
+### Automation and infrastructure
 
-### Automation
-
-A significant part of my work has involved automating repetitive business processes.
-
-This has included:
+I have also built workflows to automate repetitive business operations, including:
 
 - Data collection
 - Lead generation
-- Form-to-CRM workflows
 - Browser automation
 - PDF generation
-- Internal dashboards
+- Form-to-CRM workflows
 - Third-party API integrations
-- Automated business workflows
+- Internal dashboards
 
-I have used tools such as **Puppeteer**, Node.js services, queues, and scheduled processes to turn manual workflows into repeatable systems.
-
-### Infrastructure
-
-I have also handled parts of the infrastructure required to run applications in production.
-
-My experience includes:
+On the infrastructure side, I have practical experience with:
 
 - Linux servers
-- VPS deployment
+- VPS setup and deployment
 - Nginx
 - PM2
 - Docker
-- GitHub Actions
 - CI/CD
 - SSL
 - Cloudflare
-- Server configuration
-- Process management
-- Application monitoring and troubleshooting
-
-This has given me practical exposure to the part of software engineering that happens after:
-
-```text
-git push
-```
 
 ---
 
-# 🚀 What I Have Built
+## Skills
 
-Olism itself is one part of a broader collection of projects I have built while developing my engineering skills.
+### Core
 
-## Bhalobasha
-
-A Bangladesh-focused rental platform and backend API.
-
-**Stack:**
-
-- NestJS
 - TypeScript
-- Prisma
+- JavaScript
+- Node.js
+- NestJS
+- React
+- Next.js
+
+### Data and backend
+
 - PostgreSQL
-- Railway
-
-The project explores:
-
-- Property listings
-- Owners and seekers
-- Bids
-- Favorites
-- Authentication
-- Role-based access
-- Backend architecture
-- Bangladesh-specific geographic data
-
-It also led to the development of:
-
-`@olism/bd-geo`
-
-A reusable package for Bangladesh geographic data.
-
----
-
-## English Learner
-
-A language-learning application focused on improving English speaking ability.
-
-The project explores:
-
-- React Native
-- Android development
-- Speech-based interaction
-- AI-powered evaluation
-- Backend APIs
-- User learning workflows
-
-The long-term idea is to combine software engineering with practical AI-assisted learning.
-
----
-
-## Spoken Master
-
-A backend-focused application for English speaking practice.
-
-**Stack:**
-
-- NestJS
-- TypeScript
+- MongoDB
+- MySQL
 - Redis
 - REST APIs
+- WebSockets
+- Authentication
+- Authorization
 
-The project explores authentication, asynchronous processing, queues, and AI-assisted language-learning workflows.
+### DevOps and tooling
 
----
+- Docker
+- Linux
+- Nginx
+- PM2
+- GitHub Actions
+- CI/CD
+- Cloudflare
+- Git
 
-## Government Inconsistency
+### Practical areas
 
-A newer application concept focused on documenting and presenting inconsistencies in government-related information and processes.
-
-The project is being explored as a React Native application and is part of my current experimentation with mobile development and data-driven applications.
-
----
-
-# 🧠 What I Do
-
-My work generally sits around four areas:
-
-```text
-Backend Engineering
-        ↓
-System Design
-        ↓
-Full-Stack Development
-        ↓
-Infrastructure & Automation
-```
-
-I enjoy taking an idea and following it all the way down:
-
-```text
-Idea
- ↓
-Requirements
- ↓
-Architecture
- ↓
-Database
- ↓
-API
- ↓
-Application
- ↓
-Deployment
- ↓
-Monitoring
- ↓
-Iteration
-```
-
-That's the part of software development I find most interesting.
-
----
-
-# 🔬 What I Am Currently Doing
-
-Olism is currently evolving alongside my own engineering journey.
-
-I am currently focusing on becoming stronger as a **backend and full-stack software engineer**, while expanding into areas that sit around modern application development.
+- System design
+- Backend architecture
+- Full-stack development
+- Automation
+- Infrastructure
+- API integration
+- Production troubleshooting
 
 ### Currently Learning & Exploring
 
@@ -481,7 +369,7 @@ It is a **living record of my engineering journey**.
 
 ## 👤 Md. Oliullah Sarder
 
-**Backend / Full-Stack Software Developer**
+**AI-native Backend / Full-Stack Software Developer**
 
 Building systems, learning deeply, and documenting the journey.
 

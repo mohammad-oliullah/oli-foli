@@ -1,7 +1,7 @@
 import type { CareerContent } from "@/types/career";
 
 export const career = {
-  direction: "Backend / Full-Stack Software Developer",
+  direction: "AI-native Backend / Full-Stack Software Developer",
   summary:
     "I want to keep owning backend systems and the production path around them — APIs, data, auth, realtime where it is justified, and Linux-based deploys — while still shipping full-stack surfaces in TypeScript when that is the product.",
   targetRoles: [
