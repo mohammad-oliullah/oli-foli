@@ -2,8 +2,9 @@ import type { MetadataRoute } from "next";
 
 import { projects } from "@/data/projects";
 import { site } from "@/data/site";
+import { getPublishedPosts } from "@/lib/posts";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes = [
     "",
     "/experience",
@@ -17,6 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
   ];
 
+  const posts = await getPublishedPosts();
+
   return [
     ...routes.map((path) => ({
       url: `${site.url}${path || "/"}`,
@@ -25,6 +28,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...projects.map((project) => ({
       url: `${site.url}/projects/${project.slug}`,
       lastModified: new Date(),
+    })),
+    ...posts.map((post) => ({
+      url: `${site.url}/blogs/${post.slug}`,
+      lastModified: new Date(post.updatedAt ?? post.date ?? Date.now()),
     })),
   ];
 }

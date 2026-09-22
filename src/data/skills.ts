@@ -5,236 +5,273 @@ export const skillCategories = [
     id: "backend",
     title: "Backend",
     summary:
-      "APIs, business logic, and production services in TypeScript on Node.js.",
+      "APIs, business logic, realtime services, and production backends in TypeScript on Node.js.",
     items: [
       {
         name: "Node.js",
         usedFor:
-          "Primary runtime for APIs, automation, and production services.",
+          "Primary runtime for APIs, automation, realtime services, and production backends.",
         related: ["GoKundu", "HawkEyes", "MNTECH", "Independent Contract"],
       },
       {
         name: "NestJS",
         usedFor:
-          "Modular backend services, including merchandising automation and e-governance APIs.",
-        related: ["HawkEyes"],
+          "Modular backend services, enterprise APIs, automation services, and realtime applications.",
+        related: ["HawkEyes", "Bhalobasha"],
       },
       {
         name: "Express.js",
-        usedFor: "HTTP APIs and full-stack backends alongside React/Next.js.",
+        usedFor:
+          "HTTP APIs and full-stack backends alongside React and Next.js.",
         related: ["MNTECH"],
       },
       {
         name: "REST API",
-        usedFor: "Resource APIs with auth, RBAC, and integration endpoints.",
-        related: ["HawkEyes", "MNTECH"],
+        usedFor:
+          "Resource-based APIs with authentication, RBAC, business logic, and third-party integrations.",
+        related: ["HawkEyes", "MNTECH", "Bhalobasha"],
       },
     ],
   },
+
   {
     id: "frontend",
     title: "Frontend",
     summary:
-      "Application UIs for dashboards, listings, and product surfaces.",
+      "Web interfaces for dashboards, listings, product surfaces, and full-stack applications.",
     items: [
       {
         name: "React",
-        usedFor: "Interactive UIs for products, dashboards, and company sites.",
+        usedFor:
+          "Interactive UIs for products, dashboards, and company applications.",
         related: ["GoKundu", "MNTECH", "Bhalobasha"],
       },
       {
         name: "Next.js",
         usedFor:
-          "Full-stack web apps, agency dashboards, and production deployments.",
+          "Full-stack web applications, agency dashboards, product interfaces, and production deployments.",
         related: ["GoKundu", "MNTECH", "Bhalobasha", "Independent Contract"],
       },
       {
         name: "Tailwind CSS",
-        usedFor: "UI implementation in product and portfolio work.",
+        usedFor: "UI implementation across product and portfolio applications.",
         related: ["This portfolio"],
       },
     ],
   },
+
   {
     id: "databases",
     title: "Databases",
     summary:
-      "Schema design, aggregations, and data access for production apps.",
+      "Data modeling, schema design, queries, aggregations, and application data access.",
     items: [
       {
         name: "MongoDB",
         usedFor:
-          "Document models and aggregation pipelines for reporting and automation.",
-        related: ["GoKundu", "HawkEyes", "MNTECH"],
+          "Document models and aggregation pipelines for production applications, reporting, and automation.",
+        related: ["GoKundu", "HawkEyes"],
+      },
+      {
+        name: "Mongoose",
+        usedFor:
+          "MongoDB schema modeling and data access in Node.js applications.",
+        related: ["GoKundu", "HawkEyes"],
       },
       {
         name: "PostgreSQL",
-        usedFor: "Relational data for the Bhalobasha listing platform.",
+        usedFor:
+          "Relational data modeling and application persistence for the Bhalobasha platform.",
+        related: ["Bhalobasha"],
+      },
+      {
+        name: "Prisma",
+        usedFor:
+          "Typed database access and schema management for PostgreSQL-backed applications.",
         related: ["Bhalobasha"],
       },
       {
         name: "MySQL",
         usedFor:
-          "Relational design for classified e-commerce and business applications.",
+          "Relational database design for earlier full-stack business applications.",
         related: ["MNTECH"],
-      },
-      {
-        name: "Prisma",
-        usedFor: "Typed data access for PostgreSQL-backed product work.",
-        related: ["Bhalobasha"],
-      },
-      {
-        name: "Mongoose",
-        usedFor:
-          "MongoDB modeling in Node.js. Production ODM details per company are TODO if you want them named.",
-        related: ["MongoDB"],
       },
     ],
   },
+
   {
     id: "realtime",
     title: "Realtime",
     summary:
-      "Persistent connections and live application state where the product needs it.",
+      "Realtime communication and state coordination for applications that require live updates.",
     items: [
       {
-        name: "WebSocket",
-        usedFor: "Persistent connections for live events and messaging.",
-        related: ["Capabilities"],
-      },
-      {
         name: "Socket.IO",
-        usedFor: "Realtime channels on Node.js services.",
-        related: ["Capabilities"],
+        usedFor:
+          "Realtime communication for Node.js services, including chat and live application events.",
+        related: ["HawkEyes"],
       },
       {
         name: "Redis",
-        usedFor: "Caching and realtime-adjacent coordination.",
+        usedFor:
+          "Caching, queues, and coordination for backend and realtime workloads.",
         related: ["Capabilities"],
       },
     ],
   },
+
   {
     id: "infrastructure",
     title: "Infrastructure",
     summary:
-      "Linux VPS, reverse proxies, containers, and production networking.",
+      "Production Linux servers, reverse proxies, process management, containers, and deployment infrastructure.",
     items: [
       {
+        name: "AWS (S3 / EC2)",
+        usedFor:
+          "Object storage with S3 and hands-on experience working with EC2 instances.",
+        related: ["GoKundu"],
+      },
+      {
         name: "Linux / VPS",
-        usedFor: "Provisioning and operating production hosts end-to-end.",
+        usedFor:
+          "Provisioning, configuring, deploying, and operating production applications on Linux VPS environments.",
         related: ["GoKundu", "Independent Contract"],
       },
       {
         name: "Nginx",
-        usedFor: "Reverse proxy, SSL termination, and application routing.",
+        usedFor:
+          "Reverse proxy, SSL termination, domain routing, and application routing.",
         related: ["GoKundu", "Independent Contract"],
       },
       {
         name: "Docker",
-        usedFor: "Packaging and running services on production hosts.",
+        usedFor:
+          "Containerizing and running application services in development and production environments.",
         related: ["GoKundu", "Independent Contract"],
       },
       {
         name: "PM2",
-        usedFor: "Process management for Node.js and Next.js deployments.",
+        usedFor:
+          "Process management for Node.js and Next.js production deployments.",
         related: ["GoKundu", "Independent Contract"],
       },
       {
         name: "SSL / Cloudflare",
-        usedFor: "TLS, domains, and edge configuration for public services.",
+        usedFor:
+          "TLS configuration, domain management, and edge-level configuration for public services.",
         related: ["GoKundu", "Independent Contract"],
       },
       {
-        name: "AWS",
-        usedFor: "Cloud services used alongside VPS-based production work.",
-        related: ["GoKundu"],
-      },
-    ],
-  },
-  {
-    id: "devops",
-    title: "DevOps",
-    summary: "Repeatable deploys, backups, and host reliability.",
-    items: [
-      {
-        name: "GitHub Actions",
-        usedFor: "CI/CD pipelines for application and infrastructure workflows.",
-        related: ["GoKundu", "Independent Contract"],
-      },
-      {
-        name: "CI/CD",
-        usedFor: "Automated and zero-downtime production releases.",
-        related: ["GoKundu", "Independent Contract"],
-      },
-      {
-        name: "Backups & monitoring",
-        usedFor: "Operational backups and production monitoring workflows.",
-        related: ["GoKundu", "Independent Contract"],
-      },
-      {
-        name: "Load balancing & firewall",
-        usedFor: "Traffic distribution and host firewall configuration.",
+        name: "Linux security",
+        usedFor:
+          "Firewall configuration, SSH hardening, Fail2Ban, and production server security practices.",
         related: ["Independent Contract"],
       },
     ],
   },
+
+  {
+    id: "devops",
+    title: "DevOps",
+    summary:
+      "Deployment automation, CI/CD, backups, and production operations.",
+    items: [
+      {
+        name: "GitHub Actions",
+        usedFor:
+          "CI/CD pipelines for application deployment and production workflows.",
+        related: ["GoKundu", "Independent Contract"],
+      },
+      {
+        name: "CI/CD",
+        usedFor:
+          "Automated application builds, deployments, and repeatable production releases.",
+        related: ["GoKundu", "Independent Contract"],
+      },
+      {
+        name: "Backups & monitoring",
+        usedFor:
+          "Production backups, service monitoring, and operational maintenance.",
+        related: ["GoKundu", "Independent Contract"],
+      },
+    ],
+  },
+
   {
     id: "security",
     title: "Security",
     summary:
-      "Authz, API hardening, and security-aware backend work.",
+      "Authentication, authorization, API hardening, and security-aware backend development.",
     items: [
       {
         name: "JWT",
-        usedFor: "Token-based authentication for APIs.",
+        usedFor: "Token-based authentication and protected API access.",
         related: ["HawkEyes"],
       },
       {
         name: "RBAC",
-        usedFor: "Role-based access for multi-module platforms.",
+        usedFor:
+          "Role-based authorization across multi-module enterprise systems.",
         related: ["HawkEyes"],
       },
       {
         name: "API security",
-        usedFor: "Secure API design for enterprise and e-governance systems.",
+        usedFor:
+          "Secure API design, access control, validation, and backend hardening.",
         related: ["HawkEyes"],
       },
       {
-        name: "Penetration testing",
+        name: "Security testing",
         usedFor:
-          "Security testing considerations alongside backend delivery.",
+          "Security-focused testing and vulnerability checks alongside backend development.",
         related: ["HawkEyes"],
       },
     ],
   },
+
   {
     id: "testing",
     title: "Testing",
     summary:
-      "I test the systems I ship. Specific framework names and coverage numbers are not listed here yet.",
+      "Automated testing and end-to-end validation for backend applications.",
     items: [
       {
-        name: "TODO: testing stack",
+        name: "Jest",
         usedFor:
-          "Add unit/integration/e2e tools you want shown (for example Jest, Supertest, Playwright).",
-        related: [],
+          "Unit and application-level testing for Node.js and NestJS services.",
+        related: ["HawkEyes"],
+      },
+      {
+        name: "E2E testing",
+        usedFor:
+          "End-to-end validation of backend workflows and application behavior.",
+        related: ["HawkEyes"],
+      },
+      {
+        name: "API testing",
+        usedFor:
+          "Testing backend endpoints, authentication, authorization, and application workflows.",
+        related: ["HawkEyes"],
       },
     ],
   },
+
   {
     id: "integrations",
     title: "Third-party integrations",
-    summary: "Payments and social APIs wired into product backends.",
+    summary:
+      "External APIs and services integrated into production applications.",
     items: [
       {
         name: "Stripe",
-        usedFor: "Payments on a classified e-commerce platform.",
+        usedFor: "Payment integration for a classified e-commerce platform.",
         related: ["MNTECH"],
       },
       {
         name: "Facebook / Instagram APIs",
-        usedFor: "Social automation in an influencer management application.",
+        usedFor:
+          "Social-media integration and automation for an influencer management application.",
         related: ["MNTECH"],
       },
       {
@@ -244,10 +281,60 @@ export const skillCategories = [
       },
     ],
   },
+
+  {
+    id: "automation",
+    title: "Automation",
+    summary:
+      "Data collection, lead generation, workflow automation, and AI-assisted product workflows.",
+    items: [
+      {
+        name: "AI automation",
+        usedFor:
+          "Exploring AI-assisted workflows, automation pipelines, and agentic application patterns.",
+        related: ["Current learning"],
+      },
+      {
+        name: "Workflow automation",
+        usedFor:
+          "Lead generation, data collection, form-to-CRM workflows, and automated reporting pipelines.",
+        related: ["GoKundu"],
+      },
+      {
+        name: "Web automation",
+        usedFor:
+          "Automated browser workflows and data collection using Node.js-based tooling.",
+        related: ["GoKundu", "HawkEyes"],
+      },
+    ],
+  },
+
+  {
+    id: "system-design",
+    title: "System Design",
+    summary:
+      "Currently studying scalable architecture, distributed systems, and production system design.",
+    items: [
+      {
+        name: "System design",
+        usedFor:
+          "Learning how to design scalable, reliable, maintainable backend and distributed systems.",
+        related: ["Current learning"],
+      },
+      {
+        name: "Backend architecture",
+        usedFor:
+          "Applying modular architecture, service boundaries, data modeling, and production backend patterns.",
+        related: ["HawkEyes", "Bhalobasha", "GoKundu"],
+      },
+    ],
+  },
+
   {
     id: "tooling",
     title: "Developer tooling",
-    summary: "Packages and tools meant for other engineers to consume.",
+    summary:
+      "Reusable packages and developer-focused tools built for practical use.",
     items: [
       {
         name: "npm packages",
@@ -255,47 +342,41 @@ export const skillCategories = [
         related: ["BD Geo"],
       },
       {
-        name: "CLI / internal tooling",
+        name: "@olism/bd-geo",
         usedFor:
-          "Hobby and experimental developer tools. Named CLIs are TODO.",
-        related: ["Engineering experiments"],
+          "Open-source Bangladesh geographical and location data tooling for developers.",
+        related: ["BD Geo"],
       },
     ],
   },
-  {
-    id: "ai",
-    title: "AI / Automation",
-    summary:
-      "Automation in production product work — not a research lab claim.",
-    items: [
-      {
-        name: "AI automation",
-        usedFor:
-          "Lead-generation pipelines, data collection, and form-to-CRM workflows.",
-        related: ["GoKundu"],
-      },
-    ],
-  },
+
   {
     id: "languages",
     title: "Languages",
     summary:
-      "Languages I use in production or in low-level experiments. No proficiency percentages.",
+      "Programming languages used across professional projects and engineering work.",
     items: [
       {
         name: "TypeScript",
-        usedFor: "Primary language for backends, frontends, and packages.",
+        usedFor:
+          "Primary language for backend services, full-stack applications, automation, and packages.",
         related: ["GoKundu", "HawkEyes", "BD Geo", "Bhalobasha"],
       },
       {
         name: "JavaScript",
-        usedFor: "Node and frontend applications, including earlier product work.",
+        usedFor: "Node.js, React, and earlier full-stack applications.",
         related: ["MNTECH", "BD Geo"],
       },
       {
-        name: "Python / C++ / Assembly",
+        name: "Python",
         usedFor:
-          "Listed in my toolkit. Production case studies are not documented on this site yet; C/C++ also appear in hobby OS/CLI experiments.",
+          "Learning, experimentation, and automation-related development.",
+        related: ["Engineering experiments"],
+      },
+      {
+        name: "C / C++",
+        usedFor:
+          "Low-level programming experiments and understanding systems fundamentals.",
         related: ["Engineering experiments"],
       },
     ],

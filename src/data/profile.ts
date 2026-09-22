@@ -26,12 +26,13 @@ export const profile = {
   },
 
   currentFocus: [
-    "Backend and full-stack delivery in TypeScript",
-    "Production Linux VPS, Nginx, Docker, PM2, and CI/CD",
-    "Automation pipelines and multi-tenant product dashboards",
+    "AI automation and agentic workflows",
+    "Production Linux, Docker, Nginx, PM2, and CI/CD",
+    "System design and scalable backend architecture",
     "Open-source geo/data tooling (@olism/bd-geo)",
   ],
 
-  resumePath: "/resume/md-oliullah-sarder.pdf",
-  resumeAvailable: false,
+  resumePath:
+    "https://drive.google.com/file/d/1dz-C4X6-g7M8mO2e45n9O9jT50PgeFE0/view?usp=sharing",
+  resumeAvailable: true,
 } as const;

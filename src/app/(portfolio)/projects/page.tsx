@@ -20,7 +20,7 @@ export default function ProjectsPage() {
       <PageHeader
         path="/ projects"
         title="Projects"
-        description="Case studies, not cards. Each entry is what I actually built, with TODOs where details are still missing. Work-for-hire systems live on the Experience page unless they have a public repo."
+        description="Case studies, not cards. Each entry is what I actually built. Work-for-hire systems live on the Experience page unless they have a public repo."
       />
 
       <section className="space-y-4">
