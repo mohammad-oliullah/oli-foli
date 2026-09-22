@@ -14,9 +14,18 @@ interface RouteContext {
 function isPostInput(value: unknown): value is BlogPostInput {
   if (!value || typeof value !== "object") return false;
   const post = value as Partial<BlogPostInput>;
-  return [post.title, post.slug, post.excerpt, post.content, post.category, post.readingTime].every(
-    (field) => typeof field === "string" && field.trim().length > 0,
-  ) && Array.isArray(post.tags) && typeof post.published === "boolean";
+  return (
+    [
+      post.title,
+      post.slug,
+      post.excerpt,
+      post.content,
+      post.category,
+      post.readingTime,
+    ].every((field) => typeof field === "string" && field.trim().length > 0) &&
+    Array.isArray(post.tags) &&
+    typeof post.published === "boolean"
+  );
 }
 
 async function authorized() {
@@ -24,9 +33,11 @@ async function authorized() {
 }
 
 export async function PATCH(request: Request, { params }: RouteContext) {
-  if (!(await authorized())) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  if (!(await authorized()))
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   const body: unknown = await request.json();
-  if (!isPostInput(body)) return NextResponse.json({ error: "Invalid post data." }, { status: 400 });
+  if (!isPostInput(body))
+    return NextResponse.json({ error: "Invalid post data." }, { status: 400 });
 
   try {
     await connectToDatabase();
@@ -35,20 +46,31 @@ export async function PATCH(request: Request, { params }: RouteContext) {
       normalizePostInput(body),
       { new: true, runValidators: true },
     );
-    if (!post) return NextResponse.json({ error: "Post not found." }, { status: 404 });
-    return NextResponse.json(serializePost(post as Parameters<typeof serializePost>[0]));
+    if (!post)
+      return NextResponse.json({ error: "Post not found." }, { status: 404 });
+    return NextResponse.json(
+      serializePost(post as Parameters<typeof serializePost>[0]),
+    );
   } catch (error) {
     if (error instanceof Error && error.message.includes("duplicate key")) {
-      return NextResponse.json({ error: "That slug is already in use." }, { status: 409 });
+      return NextResponse.json(
+        { error: "That slug is already in use." },
+        { status: 409 },
+      );
     }
-    return NextResponse.json({ error: "Unable to update post." }, { status: 500 });
+    return NextResponse.json(
+      { error: "Unable to update post." },
+      { status: 500 },
+    );
   }
 }
 
 export async function DELETE(_request: Request, { params }: RouteContext) {
-  if (!(await authorized())) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  if (!(await authorized()))
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   await connectToDatabase();
   const post = await Post.findByIdAndDelete((await params).id);
-  if (!post) return NextResponse.json({ error: "Post not found." }, { status: 404 });
+  if (!post)
+    return NextResponse.json({ error: "Post not found." }, { status: 404 });
   return new NextResponse(null, { status: 204 });
 }

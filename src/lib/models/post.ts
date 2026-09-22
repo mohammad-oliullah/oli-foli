@@ -17,7 +17,13 @@ export interface PostDocument {
 const postSchema = new Schema<PostDocument>(
   {
     title: { type: String, required: true, trim: true },
-    slug: { type: String, required: true, unique: true, lowercase: true, trim: true },
+    slug: {
+      type: String,
+      required: true,
+      unique: true,
+      lowercase: true,
+      trim: true,
+    },
     excerpt: { type: String, required: true, trim: true },
     content: { type: String, required: true },
     category: { type: String, required: true, trim: true },

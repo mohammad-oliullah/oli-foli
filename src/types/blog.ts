@@ -9,6 +9,8 @@ export interface BlogPost {
   url: string;
   readingTime: string;
   published: boolean;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 export interface BlogPostInput {

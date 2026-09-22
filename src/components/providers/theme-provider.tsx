@@ -1,6 +1,13 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+  type ReactNode,
+} from "react";
 
 type Theme = "light" | "dark" | "system";
 
@@ -14,7 +21,9 @@ const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
 function getSystemTheme(): "light" | "dark" {
   if (typeof window === "undefined") return "light";
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
 }
 
 function applyTheme(theme: Theme) {
@@ -38,7 +47,10 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
 
   useEffect(() => {
     const storedTheme = window.localStorage.getItem("theme") as Theme | null;
-    const nextTheme = storedTheme && ["light", "dark", "system"].includes(storedTheme) ? storedTheme : "system";
+    const nextTheme =
+      storedTheme && ["light", "dark", "system"].includes(storedTheme)
+        ? storedTheme
+        : "system";
     setThemeState(nextTheme);
     setMounted(true);
   }, []);
@@ -74,7 +86,9 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     };
   }, [theme]);
 
-  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
+  return (
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
 }
 
 export function useTheme() {

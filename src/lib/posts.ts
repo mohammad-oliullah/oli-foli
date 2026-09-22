@@ -2,8 +2,16 @@ import type { BlogPost, BlogPostInput } from "@/types/blog";
 import { connectToDatabase } from "@/lib/mongodb";
 import { Post, type PostDocument } from "@/lib/models/post";
 
-export function toIsoDate(value: Date | string | null | undefined): string {
+export function toIsoDate(value: Date | string | { $date?: string | Date } | null | undefined): string {
   if (!value) return new Date().toISOString();
+
+  if (typeof value === "object" && !(value instanceof Date)) {
+    if ("$date" in value && value.$date) {
+      return toIsoDate(value.$date);
+    }
+
+    return new Date().toISOString();
+  }
 
   const dateValue = value instanceof Date ? value : new Date(value);
   if (Number.isNaN(dateValue.getTime())) return new Date().toISOString();
@@ -40,6 +48,8 @@ function toBlogPost(post: PostDocument & { _id: unknown }): BlogPost {
     url: `/blogs/${post.slug}`,
     readingTime: post.readingTime,
     published: post.published,
+    createdAt: toIsoDate(post.createdAt),
+    updatedAt: toIsoDate(post.updatedAt),
   };
 }
 
