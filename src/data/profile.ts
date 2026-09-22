@@ -26,7 +26,6 @@ export const profile = {
   },
 
   currentFocus: [
-    "Backend and full-stack delivery in TypeScript",
     "AI automation and agentic workflows",
     "Production Linux, Docker, Nginx, PM2, and CI/CD",
     "System design and scalable backend architecture",
