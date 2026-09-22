@@ -83,7 +83,7 @@ export function PostManager({ initialPosts }: { initialPosts: CmsPost[] }) {
             <li key={post._id}>
               <button type="button" onClick={() => edit(post)} className="w-full rounded-md px-3 py-2 text-left text-sm hover:bg-muted focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50">
                 <span className="block truncate font-medium">{post.title}</span>
-                <span className="mt-1 block font-mono text-[10px] uppercase text-muted-foreground">{post.published ? "Published" : "Draft"} · {post.updatedAt.slice(0, 10)}</span>
+                <span className="mt-1 block font-mono text-[10px] uppercase text-muted-foreground">{post.published ? "Published" : "Draft"} · {post.updatedAt?.slice(0, 10) ?? "—"}</span>
               </button>
             </li>
           ))}

@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 import { authOptions } from "@/lib/auth";
 import { connectToDatabase } from "@/lib/mongodb";
 import { Post } from "@/lib/models/post";
-import { normalizePostInput } from "@/lib/posts";
+import { normalizePostInput, serializePost } from "@/lib/posts";
 import type { BlogPostInput } from "@/types/blog";
 
 function isPostInput(value: unknown): value is BlogPostInput {
@@ -23,7 +23,7 @@ export async function GET() {
   if (!(await requireAdmin())) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   await connectToDatabase();
   const posts = await Post.find().sort({ updatedAt: -1 }).lean();
-  return NextResponse.json(posts);
+  return NextResponse.json(posts.map((post) => serializePost(post as Parameters<typeof serializePost>[0])));
 }
 
 export async function POST(request: Request) {
@@ -34,7 +34,7 @@ export async function POST(request: Request) {
   try {
     await connectToDatabase();
     const post = await Post.create(normalizePostInput(body));
-    return NextResponse.json(post, { status: 201 });
+    return NextResponse.json(serializePost(post as Parameters<typeof serializePost>[0]), { status: 201 });
   } catch (error) {
     if (error instanceof Error && error.message.includes("duplicate key")) {
       return NextResponse.json({ error: "That slug is already in use." }, { status: 409 });

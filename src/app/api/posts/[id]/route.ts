@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 import { authOptions } from "@/lib/auth";
 import { connectToDatabase } from "@/lib/mongodb";
 import { Post } from "@/lib/models/post";
-import { normalizePostInput } from "@/lib/posts";
+import { normalizePostInput, serializePost } from "@/lib/posts";
 import type { BlogPostInput } from "@/types/blog";
 
 interface RouteContext {
@@ -36,7 +36,7 @@ export async function PATCH(request: Request, { params }: RouteContext) {
       { new: true, runValidators: true },
     );
     if (!post) return NextResponse.json({ error: "Post not found." }, { status: 404 });
-    return NextResponse.json(post);
+    return NextResponse.json(serializePost(post as Parameters<typeof serializePost>[0]));
   } catch (error) {
     if (error instanceof Error && error.message.includes("duplicate key")) {
       return NextResponse.json({ error: "That slug is already in use." }, { status: 409 });
