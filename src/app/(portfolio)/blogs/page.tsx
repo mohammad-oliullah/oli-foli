@@ -33,7 +33,9 @@ export const dynamic = "force-dynamic";
 
 function formatDate(value?: string) {
   if (!value) return "Date unavailable";
-  return new Intl.DateTimeFormat("en", { dateStyle: "medium" }).format(new Date(value));
+  return new Intl.DateTimeFormat("en", { dateStyle: "medium" }).format(
+    new Date(value),
+  );
 }
 
 export default async function BlogsPage() {
@@ -54,8 +56,13 @@ export default async function BlogsPage() {
                 {post.category} · {formatDate(post.date)} · {post.readingTime}
               </p>
               <h2 className="mt-2 text-lg font-semibold">{post.title}</h2>
-              <p className="mt-2 text-sm leading-6 text-foreground">{post.excerpt}</p>
-              <Link href={post.url} className="mt-3 inline-flex text-xs hover:text-muted-foreground">
+              <p className="mt-2 text-sm leading-6 text-foreground">
+                {post.excerpt}
+              </p>
+              <Link
+                href={post.url}
+                className="mt-3 inline-flex text-xs hover:text-muted-foreground"
+              >
                 Read post →
               </Link>
             </li>

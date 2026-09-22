@@ -2,7 +2,9 @@ import type { BlogPost, BlogPostInput } from "@/types/blog";
 import { connectToDatabase } from "@/lib/mongodb";
 import { Post, type PostDocument } from "@/lib/models/post";
 
-export function toIsoDate(value: Date | string | { $date?: string | Date } | null | undefined): string {
+export function toIsoDate(
+  value: Date | string | { $date?: string | Date } | null | undefined,
+): string {
   if (!value) return new Date().toISOString();
 
   if (typeof value === "object" && !(value instanceof Date)) {
@@ -55,13 +57,20 @@ function toBlogPost(post: PostDocument & { _id: unknown }): BlogPost {
 
 export async function getPublishedPosts(): Promise<BlogPost[]> {
   await connectToDatabase();
-  const posts = await Post.find({ published: true }).sort({ date: -1 }).lean<PostDocument[]>();
-  return posts.map((post) => toBlogPost(post as PostDocument & { _id: unknown }));
+  const posts = await Post.find({ published: true })
+    .sort({ date: -1 })
+    .lean<PostDocument[]>();
+  return posts.map((post) =>
+    toBlogPost(post as PostDocument & { _id: unknown }),
+  );
 }
 
 export async function getPublishedPost(slug: string): Promise<BlogPost | null> {
   await connectToDatabase();
-  const post = await Post.findOne({ slug, published: true }).lean<PostDocument>();
+  const post = await Post.findOne({
+    slug,
+    published: true,
+  }).lean<PostDocument>();
   return post ? toBlogPost(post as PostDocument & { _id: unknown }) : null;
 }
 
