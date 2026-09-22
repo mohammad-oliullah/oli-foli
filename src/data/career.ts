@@ -44,8 +44,10 @@ export const career = {
     "Reporting and aggregations that stay correct as the data grows.",
   ],
   currentlyExploring: [
-    "Low-level / OS-related experiments and CLI tooling (hobby, not a job claim).",
-    "Packaging reusable data and developer libraries (for example BD Geo).",
-    "TODO: System Design.",
+    "Backend and full-stack delivery in TypeScript",
+    "AI automation and agentic workflows",
+    "Production Linux, Docker, Nginx, PM2, and CI/CD",
+    "System design and scalable backend architecture",
+    "Open-source geo/data tooling (@olism/bd-geo)",
   ],
 } satisfies CareerContent;

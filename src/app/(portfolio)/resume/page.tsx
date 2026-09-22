@@ -16,7 +16,6 @@ export const metadata: Metadata = {
 
 const highlightedSkills = skillCategories
   .flatMap((category) => category.items.map((item) => item.name))
-  .filter((name) => !name.startsWith("TODO"))
   .slice(0, 18);
 
 export default function ResumePage() {

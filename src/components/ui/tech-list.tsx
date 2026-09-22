@@ -1,8 +1,6 @@
 export function TechList({ items }: { items: readonly string[] }) {
   if (items.length === 0) {
-    return (
-      <p className="font-mono text-xs text-muted-foreground">TODO: technologies</p>
-    );
+    return null;
   }
 
   return (
