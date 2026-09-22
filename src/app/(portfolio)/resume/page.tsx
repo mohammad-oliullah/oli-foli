@@ -25,7 +25,7 @@ export default function ResumePage() {
       <PageHeader
         path="/ resume"
         title="Resume"
-        description="Short recruiter view. Full narrative is on Experience and Projects. The PDF slot is ready; the file is not in the repo yet."
+        description="Short recruiter view. Full narrative is on Experience and Projects."
       />
 
       <section className="rounded-lg border p-5">
@@ -52,7 +52,10 @@ export default function ResumePage() {
               Email
             </dt>
             <dd>
-              <a href={`mailto:${profile.contact.email}`} className="hover:underline">
+              <a
+                href={`mailto:${profile.contact.email}`}
+                className="hover:underline"
+              >
                 {profile.contact.email}
               </a>
             </dd>
@@ -62,10 +65,16 @@ export default function ResumePage() {
               Links
             </dt>
             <dd className="flex flex-wrap gap-3">
-              <ExternalLink href={profile.links.github} className="hover:underline">
+              <ExternalLink
+                href={profile.links.github}
+                className="hover:underline"
+              >
                 GitHub
               </ExternalLink>
-              <ExternalLink href={profile.links.linkedin} className="hover:underline">
+              <ExternalLink
+                href={profile.links.linkedin}
+                className="hover:underline"
+              >
                 LinkedIn
               </ExternalLink>
             </dd>
@@ -74,37 +83,36 @@ export default function ResumePage() {
       </section>
 
       <section className="rounded-lg border p-5">
-        <h2 className="text-lg font-semibold tracking-tight">Resume file</h2>
-        {profile.resumeAvailable ? (
-          <a
-            href={profile.resumePath}
-            className="mt-3 inline-flex rounded-md bg-foreground px-3 py-1.5 text-sm font-medium text-background"
-          >
-            Download PDF
-          </a>
-        ) : (
-          <p className="mt-3 text-sm leading-7 text-foreground">
-            PDF is not attached. Add a file at{" "}
-            <code className="font-mono text-xs">
-              public/resume/md-oliullah-sarder.pdf
-            </code>{" "}
-            and set <code className="font-mono text-xs">resumeAvailable</code> to{" "}
-            <code className="font-mono text-xs">true</code> in{" "}
-            <code className="font-mono text-xs">src/data/profile.ts</code>.
-          </p>
-        )}
+        <h2 className="text-lg font-semibold tracking-tight">
+          Resume Google Drive
+        </h2>
+
+        <a
+          href={profile.resumePath}
+          className="mt-3 inline-flex rounded-md bg-foreground px-3 py-1.5 text-sm font-medium text-background"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Resume
+        </a>
       </section>
 
       <section>
         <div className="mb-4 flex items-end justify-between">
           <h2 className="text-lg font-semibold tracking-tight">Experience</h2>
-          <Link href="/experience" className="text-xs text-muted-foreground hover:text-foreground">
+          <Link
+            href="/experience"
+            className="text-xs text-muted-foreground hover:text-foreground"
+          >
             Full page
           </Link>
         </div>
         <ul className="space-y-3">
           {experience.map((job) => (
-            <li key={`${job.company}-${job.role}`} className="rounded-lg border p-4">
+            <li
+              key={`${job.company}-${job.role}`}
+              className="rounded-lg border p-4"
+            >
               <div className="flex flex-col gap-1 sm:flex-row sm:justify-between">
                 <p className="text-sm font-medium">
                   {job.role} · {job.company}
@@ -120,7 +128,9 @@ export default function ResumePage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-semibold tracking-tight">Skills snapshot</h2>
+        <h2 className="text-lg font-semibold tracking-tight">
+          Skills snapshot
+        </h2>
         <div className="mt-4">
           <TechList items={highlightedSkills} />
         </div>
