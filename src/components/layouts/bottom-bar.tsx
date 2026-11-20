@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {  Brain, Mail } from "lucide-react";
+import { Brain, Mail, MessageSquarePlus } from "lucide-react";
 
 export function BottomBar() {
   return (
@@ -12,6 +12,16 @@ export function BottomBar() {
           <Mail className="size-3.5" aria-hidden />
           Contact
         </Link>
+
+        <a
+          href="https://feedback-me.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 rounded-md border px-3 py-1.5 text-xs font-medium text-foreground/80 transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
+        >
+          <MessageSquarePlus className="size-3.5" aria-hidden />
+          Feedback
+        </a>
 
         <Link
           href="/ai"
