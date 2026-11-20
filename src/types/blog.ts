@@ -8,6 +8,7 @@ export interface BlogPost {
   tags: readonly string[];
   url: string;
   readingTime: string;
+  videoUrl?: string;
   published: boolean;
   createdAt?: string;
   updatedAt?: string;
@@ -21,5 +22,6 @@ export interface BlogPostInput {
   category: string;
   tags: string[];
   readingTime: string;
+  videoUrl: string;
   published: boolean;
 }

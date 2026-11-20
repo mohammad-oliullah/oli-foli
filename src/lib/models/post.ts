@@ -9,6 +9,7 @@ export interface PostDocument {
   tags: string[];
   date: Date;
   readingTime: string;
+  videoUrl: string;
   published: boolean;
   createdAt: Date;
   updatedAt: Date;
@@ -30,6 +31,7 @@ const postSchema = new Schema<PostDocument>(
     tags: [{ type: String, trim: true }],
     date: { type: Date, required: true, default: Date.now },
     readingTime: { type: String, required: true, trim: true },
+    videoUrl: { type: String, default: "", trim: true },
     published: { type: Boolean, default: false },
   },
   { timestamps: true },
