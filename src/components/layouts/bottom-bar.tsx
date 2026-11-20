@@ -13,15 +13,13 @@ export function BottomBar() {
           Contact
         </Link>
 
-        <a
-          href="https://feedback-me.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/feedback-me"
           className="flex items-center gap-2 rounded-md border px-3 py-1.5 text-xs font-medium text-foreground/80 transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
         >
           <MessageSquarePlus className="size-3.5" aria-hidden />
           Feedback
-        </a>
+        </Link>
 
         <Link
           href="/ai"
