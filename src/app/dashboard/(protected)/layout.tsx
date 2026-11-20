@@ -4,8 +4,11 @@ import { redirect } from "next/navigation";
 
 import { authOptions } from "@/lib/auth";
 
+import { SignOutButton } from "@/components/auth/sign-out-button";
+
 const navigation = [
   { href: "/dashboard", label: "Overview" },
+  { href: "/dashboard/passkeys", label: "Manage passkeys" },
   { href: "/dashboard/posts", label: "Posts" },
   { href: "/dashboard/projects", label: "Projects" },
   { href: "/dashboard/experience", label: "Experience" },
@@ -62,6 +65,7 @@ export default async function DashboardLayout({
           >
             View portfolio
           </Link>
+          <SignOutButton />
         </div>
       </aside>
 

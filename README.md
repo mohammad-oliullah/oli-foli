@@ -365,6 +365,29 @@ This is not intended to be a finished product.
 
 It is a **living record of my engineering journey**.
 
+## Feedback and admin access
+
+The public feedback page is available at `/feedback-me`. Visitors can leave
+feedback anonymously or include an optional name. Feedback is paginated, and
+the admin can reply after signing in.
+
+Admin access uses passkeys after initial account setup. At most two passkeys
+can be registered; synced passkeys may work on more than one physical device.
+Configure the following values in the deployment environment (and in your
+local `.env`):
+
+- `PASSKEY_SETUP_SECRET`
+- `PASSKEY_ORIGIN` and `PASSKEY_RP_ID`
+- Existing `MONGODB_URI`, `NEXTAUTH_SECRET`, and `NEXTAUTH_URL`
+
+For local development, set `PASSKEY_ORIGIN=http://localhost:3000` and
+`PASSKEY_RP_ID=localhost`. For production, use the deployed HTTPS origin and
+its hostname as the RP ID. Open `/setup-passkey`, enter the setup secret and
+the admin email and password, and register the first passkey. The password is
+stored as a bcrypt hash and is only needed to authorize initial setup.
+Subsequent sign-ins use passkeys; an additional passkey can be added from the
+dashboard's passkey management page.
+
 ---
 
 ## 👤 Md. Oliullah Sarder

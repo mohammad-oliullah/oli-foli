@@ -1,30 +1,37 @@
-import bcrypt from "bcryptjs";
 import type { AuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
-import { connectToDatabase } from "@/lib/mongodb";
-import { AdminUser } from "@/lib/models/admin-user";
+import { consumePasskeyLoginToken } from "@/lib/passkeys";
 
 export const authOptions: AuthOptions = {
   session: { strategy: "jwt" },
   pages: { signIn: "/dashboard/login" },
+  cookies: {
+    sessionToken: {
+      name: `${process.env.NODE_ENV === "production" ? "__Secure-" : ""}oli-folio.passkey.session-token`,
+      options: {
+        httpOnly: true,
+        sameSite: "lax",
+        path: "/",
+        secure: process.env.NODE_ENV === "production",
+      },
+    },
+  },
   providers: [
     CredentialsProvider({
-      name: "Portfolio admin",
+      id: "passkey",
+      name: "Passkey",
       credentials: {
-        email: { label: "Email", type: "email" },
-        password: { label: "Password", type: "password" },
+        loginToken: { label: "Passkey login token", type: "text" },
       },
       async authorize(credentials) {
-        const email = credentials?.email?.trim().toLowerCase();
-        const password = credentials?.password;
-        if (!email || !password) return null;
+        const loginToken = credentials?.loginToken;
+        if (!loginToken) return null;
 
-        await connectToDatabase();
-        const admin = await AdminUser.findOne({ email }).lean();
-        if (!admin || !(await bcrypt.compare(password, admin.passwordHash))) return null;
+        const admin = await consumePasskeyLoginToken(loginToken);
+        if (!admin) return null;
 
-        return { id: String(admin._id), email: admin.email };
+        return { id: admin._id.toString(), email: admin.email };
       },
     }),
   ],
