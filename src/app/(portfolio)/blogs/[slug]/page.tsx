@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 
 import { site } from "@/data/site";
 import { getPublishedPost } from "@/lib/posts";
+import { VideoPlayer } from "@/components/ui/video-player";
 
 interface BlogDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -166,6 +167,11 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
         </div>
 
         <div className="prose-lite mt-10 text-base leading-8">
+          {post.videoUrl ? (
+            <div className="mb-8">
+              <VideoPlayer url={post.videoUrl} />
+            </div>
+          ) : null}
           <ReactMarkdown>{post.content}</ReactMarkdown>
         </div>
       </article>

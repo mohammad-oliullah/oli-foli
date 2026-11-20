@@ -14,6 +14,13 @@ interface RouteContext {
 function isPostInput(value: unknown): value is BlogPostInput {
   if (!value || typeof value !== "object") return false;
   const post = value as Partial<BlogPostInput>;
+  if (
+    post.videoUrl !== undefined &&
+    (typeof post.videoUrl !== "string" ||
+      (post.videoUrl.trim().length > 0 &&
+        !/^https?:\/\//i.test(post.videoUrl.trim())))
+  )
+    return false;
   return (
     [
       post.title,

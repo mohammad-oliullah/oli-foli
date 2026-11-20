@@ -32,6 +32,7 @@ export function serializePost(post: Partial<PostDocument> & { _id?: unknown }) {
     tags: post.tags ?? [],
     date: toIsoDate(post.date),
     readingTime: post.readingTime ?? "",
+    videoUrl: post.videoUrl ?? "",
     published: Boolean(post.published),
     createdAt: toIsoDate(post.createdAt),
     updatedAt: toIsoDate(post.updatedAt),
@@ -49,6 +50,7 @@ function toBlogPost(post: PostDocument & { _id: unknown }): BlogPost {
     date: toIsoDate(post.date),
     url: `/blogs/${post.slug}`,
     readingTime: post.readingTime,
+    videoUrl: post.videoUrl ?? "",
     published: post.published,
     createdAt: toIsoDate(post.createdAt),
     updatedAt: toIsoDate(post.updatedAt),
@@ -84,5 +86,6 @@ export function normalizePostInput(input: BlogPostInput) {
     category: input.category.trim(),
     tags: input.tags.map((tag) => tag.trim()).filter(Boolean),
     readingTime: input.readingTime.trim(),
+    videoUrl: input.videoUrl?.trim() ?? "",
   };
 }

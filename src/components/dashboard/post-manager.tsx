@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 
 import type { CmsPost } from "@/types/cms";
 import type { BlogPostInput } from "@/types/blog";
+import { VideoPlayer } from "@/components/ui/video-player";
 
 const emptyPost: BlogPostInput = {
   title: "",
@@ -14,6 +15,7 @@ const emptyPost: BlogPostInput = {
   category: "",
   tags: [],
   readingTime: "5 min read",
+  videoUrl: "",
   published: false,
 };
 
@@ -53,6 +55,7 @@ export function PostManager({ initialPosts }: { initialPosts: CmsPost[] }) {
       category: post.category,
       tags: post.tags,
       readingTime: post.readingTime,
+      videoUrl: post.videoUrl ?? "",
       published: post.published,
     });
     setError("");
@@ -229,6 +232,26 @@ export function PostManager({ initialPosts }: { initialPosts: CmsPost[] }) {
             className="field"
           />
         </Field>
+        <Field label="Video URL (optional)">
+          <input
+            type="url"
+            value={draft.videoUrl}
+            onChange={(event) =>
+              setDraft((value) => ({
+                ...value,
+                videoUrl: event.target.value,
+              }))
+            }
+            placeholder="YouTube, Vimeo, or direct video link"
+            className="field"
+          />
+        </Field>
+        {draft.videoUrl ? (
+          <div>
+            <p className="mb-2 text-sm font-medium">Video preview</p>
+            <VideoPlayer url={draft.videoUrl} />
+          </div>
+        ) : null}
         <label className="flex items-center gap-2 text-sm">
           <input
             type="checkbox"
